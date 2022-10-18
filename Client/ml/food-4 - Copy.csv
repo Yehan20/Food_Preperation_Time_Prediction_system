@@ -1,0 +1,344 @@
+﻿name,type,size,amount,non_veg,veg,queued_orders,chef_experience,workedHrs,time
+breadPudding,dessert,nm,3,0,1,0,senior,1,18
+Beef Shawarma,bites,nm,2,1,0,1,senior,0.5,14
+SweetandsourPork,main,nm,1,1,0,0,junior,4,25
+chickenBuriyani,main,lg,1,1,0,1,senior,1.5,40
+Vegetable spring roll,bites,lg,7,0,1,0,junior,2.5,15
+vegSalad,bites,nm,3,0,1,0,senior,0,10
+lampris,main,nm,1,1,4,0,senior,2,30
+bbqChicken,bites,nm,4,1,0,6,junior,1,28
+arabicBread,appetizer,lg,4,0,1,4,senior,2,30
+chickenSalad,bites,xl,1,0,1,0,junior,2.5,8
+egg fried rice,main,xl,3,1,0,3,senior,5,39
+chickenpasta,main,xl,1,1,0,5,senior,0.5,30
+garlicBread,bites,nm,5,0,1,1,senior,1,15
+chickenPizza,main,lg,2,1,0,4,senior,4,30
+devilledPrawns,bites,nm,1,0,1,1,junior,1,12
+arabicBread,appetizer,xl,2,0,1,2,senior,4,14
+cheeseSpagetti,main,nm,5,0,1,0,senior,4,50
+chickenpasta,main,xl,2,1,0,0,senior,1,20
+chickenBuriyani,main,nm,2,1,0,3,junior,7,60
+chickenlasange,main,xl,2,1,0,1,junior,5,35
+hoppers,bites,lg,5,0,1,1,junior,1,8
+tacos,bites,nm,4,1,0,2,senior,3,30
+portuguseOmlet,bites,xl,1,1,0,4,junior,0,5
+cheeseKotthu,main,nm,10,1,0,0,senior,7,35
+chickenFriedRice,main,lg,2,1,0,1,junior,3,22
+eggroti,bites,xl,3,1,0,0,junior,1.5,15
+chickenlasange,main,lg,1,1,0,1,senior,0.5,30
+chickenlasange,main,lg,1,1,0,1,junior,3.5,26
+savana,main,xl,4,1,0,3,senior,8,65
+chickenBurger,main,xl,5,1,0,0,senior,6,20
+dolphinKotthu,main,lg,2,1,0,1,senior,1,10
+mongolianRice,main,nm,5,1,0,2,junior,3.5,35
+muttonBuriyani,main,lg,2,1,0,0,junior,5,40
+seafoodChopsey,main,xl,4,1,0,0,senior,5,45
+vegChopsy,appetizer,lg,1,0,1,1,senior,1,15
+chickpea,appetizer,xl,2,0,1,1,junior,0.5,20
+lampris,main,lg,3,1,0,0,senior,2,28
+chickenlasange,main,lg,5,1,0,2,junior,7,50
+bbqChicken,bites,xl,2,1,0,0,junior,0.5,16
+devilledChicken,main,nm,6,1,0,7,junior,2,50
+breadPudding,dessert,nm,3,0,1,1,senior,1,20
+Beef Shawarma,bites,lg,2,1,0,3,senior,1.5,30
+chickenpasta,main,nm,3,1,0,1,junior,0.5,25
+chickenBurger,main,nm,1,1,0,0,junior,2.5,5
+vegetalbleKotthu,main,xl,2,0,1,1,senior,1,14
+Vegetable spring roll,bites,nm,2,0,1,2,junior,1.5,17
+chickenWings,bites,xl,5,1,0,4,junior,5,40
+roastedChicken,main,xl,3,1,0,10,senior,7,55
+chickpea,appetizer,nm,4,0,1,0,junior,1,16
+submarine,appetizer,nm,1,1,0,1,junior,1,5
+chickenBurger,main,lg,3,1,0,2,junior,0,15
+samosa,bites,nm,1,0,1,0,junior,1,5
+devilledPrawns,bites,lg,4,1,0,7,junior,1,40
+chickenWrap,appetizer,nm,1,1,0,0,junior,2,9
+beefBurger,main,nm,2,1,0,0,senior,0,11
+savana,premire,lg,1,1,0,0,junior,4,40
+chickenWings,bites,nm,15,1,0,3,junior,2,25
+Pancaces,appetizer,xl,3,0,1,2,senior,1.5,15
+ fried noodles with vegetables ,main,nm,2,0,1,4,junior,3,45
+egg fried rice,main,lg,2,1,0,2,junior,4,30
+bbqChicken,bites,nm,5,1,0,0,junior,1,30
+nasiGoreng,main,lg,2,1,0,2,senior,4,40
+mango pudding,dessert,nm,1,0,1,1,senior,3,20
+Pancaces,appetizer,nm,1,0,1,0,junior,0,8
+arabicBread,appetizer,xl,4,0,1,2,junior,0.5,16
+beefBurger,main,lg,3,1,0,3,senior,1.5,30
+cheeseKotthu,main,xl,1,1,0,1,senior,0,15
+Tuna Club Sandwich,appetizer,lg,3,1,0,2,senior,1,16
+applePie,dessert,nm,1,0,0,0,senior,0,10
+roastedChicken,main,xl,3,1,0,1,senior,4,35
+tacos,bites,xl,1,1,0,2,junior,2,20
+cheeseKotthu,main,lg,2,1,0,1,junior,1,15
+ fried noodles with vegetables ,main,lg,1,0,1,0,junior,0,20
+beefBurger,main,lg,10,1,0,0,junior,0,45
+noodlesKothu,main,nm,4,1,0,4,junior,2,16
+ fried noodles with vegetables ,main,nm,1,0,1,0,senior,1.5,22
+RoyalBurgerMeal,bonus,nm,2,1,0,2,junior,4.5,35
+chickenFriedRice,main,nm,10,1,0,1,senior,0.5,40
+Sweet and sour pork,main,lg,1,1,0,0,senior,3,32
+arabicBread,appetizer,xl,3,0,1,1,senior,2,13
+cheeseSpagetti,main,xl,2,0,1,1,senior,5,50
+portuguseOmlet,bites,xl,8,1,0,4,junior,4,40
+portuguseOmlet,bites,xl,1,1,0,0,senior,1,7
+chickenBurger,main,nm,1,1,0,1,senior,0,8
+lavaCake,dessert,xl,2,0,1,1,junior,2,27
+roastedChicken,main,xl,3,1,0,1,senior,4,35
+bbqChicken,bites,lg,2,1,0,5,senior,1,40
+nasiGoreng,main,xl,1,1,0,3,senior,8,60
+chickenKotthu,main,xl,5,1,0,5,senior,7,50
+mango pudding,dessert,xl,2,0,1,0,senior,3,31
+noodlesChopsy,main,nm,4,1,0,1,senior,4.5,30
+cheeseSpagetti,main,lg,1,0,1,4,senior,2,45
+noodlesKothu,main,lg,1,1,0,4,senior,4,27
+sausagePizza,main,lg,2,1,0,2,junior,3,25
+chickenWrap,appetizer,nm,1,0,1,0,senior,1,10
+vegetalbleKotthu,main,nm,1,0,1,0,junior,1,7
+beeflasange,main,xl,1,1,0,0,junior,0,30
+submarine,appetizer,nm,3,1,0,1,senior,1,10
+ fried noodles with vegetables ,main,xl,3,0,1,3,junior,2,40
+Pancaces,appetizer,nm,7,0,1,3,senior,6,30
+cheeseSpagetti,main,lg,3,0,1,3,junior,1,60
+cuttleFishDevil ,bites,nm,3,1,0,2,junior,3,45
+chickenpasta,main,xl,4,1,0,3,junior,1,35
+cheeseKotthu,main,nm,5,1,0,5,senior,0.5,40
+arabicBread,appetizer,nm,3,0,1,0,junior,0,15
+sausages,bites,xl,20,1,0,1,junior,4,30
+roastedCrabs,appetizer,lg,10,1,0,0,senior,7.5,60
+devilledCuttlefish,bites,nm,1,1,0,5,senior,4,35
+chickenKotthu,main,lg,3,1,0,0,junior,0.5,23
+vegroti,bites,nm,5,0,1,2,senior,1,10
+chickenSalad,bites,nm,2,0,1,0,junior,1,6
+chickenBurger,main,lg,1,1,0,4,senior,3,25
+lampris,main,lg,5,1,2,0,junior,5,40
+vegroti,bites,lg,5,0,1,3,senior,1,11
+Pancaces,appetizer,lg,3,0,1,1,junior,2.5,22
+chickenBuriyani,main,nm,3,1,0,3,senior,2,65
+chickenBuriyani,main,lg,2,1,0,2,junior,3,40
+SweetandsourPork,main,lg,1,1,0,1,senior,5,35
+mixedFriedRice,main,nm,1,1,0,0,senior,1,15
+Tuna Club Sandwich,appetizer,nm,2,1,0,1,senior,2,11
+chickenFriedRice,main,xl,5,1,0,4,junior,1.5,55
+egghoppers,bites,nm,5,1,0,3,junior,0.5,10
+mixedChopsy,main,xl,1,1,0,0,junior,1,25
+egg fried rice,main,nm,1,1,0,0,junior,1,16
+RoyalBurgerMeal,bonus,nm,2,1,0,1,senior,2,35
+ChickenPremireMeal,premire,xl,1,1,0,0,senior,5,35
+vegBurger,main,lg,1,0,1,0,senior,1,10
+chickenBurger,main,nm,2,1,0,1,junior,0,10
+beefBurger,main,nm,3,1,0,0,senior,1,15
+seafoodChopsey,main,lg,3,1,0,5,junior,6,50
+hoppers,bites,xl,10,0,1,4,senior,2,25
+chips,bites,lg,5,0,1,0,senior,1,18
+applePie,dessert,lg,3,0,1,4,junior,1.5,25
+chickenWings,bites,nm,10,1,0,2,senior,3.5,30
+arabicBread,appetizer,nm,3,0,1,0,junior,3,15
+nasiGoreng,main,lg,1,1,0,2,senior,5,35
+applePie,dessert,nm,4,0,0,4,junior,1,30
+cheeseKotthu,main,xl,1,1,0,2,junior,0,12
+vegSalad,bites,lg,1,0,1,0,junior,1,13
+arabicBread,appetizer,lg,1,0,1,1,senior,1,10
+eggroti,bites,nm,2,1,0,0,senior,1,12
+Beef Shawarma,bites,nm,2,1,0,1,junior,3,12
+chickenpasta,main,lg,2,1,0,2,junior,3,30
+Vegetable spring roll,bites,lg,5,0,1,0,junior,1,13
+beeflasange,main,lg,4,1,0,4,senior,3,45
+applePie,dessert,nm,5,0,0,5,junior,7,40
+roastedChicken,main,lg,1,1,0,2,junior,2,20
+roastedCrabs,appetizer,xl,4,1,0,0,junior,4,45
+chickenBurger,main,xl,5,1,0,3,senior,7,30
+breadPudding,dessert,xl,2,0,1,2,senior,0,31
+tacos,bites,lg,3,1,0,0,senior,1.5,12
+ fried noodles with vegetables ,main,lg,1,0,1,1,senior,1,24
+sausages,bites,lg,5,1,0,1,junior,1,10
+breadPudding,dessert,xl,2,0,1,2,senior,0,31
+chickenKotthu,main,lg,3,1,0,3,senior,1,24
+breadPudding,dessert,lg,1,0,1,0,junior,0.5,10
+applePie,dessert,lg,2,0,0,1,senior,0,20
+vegBurger,main,xl,2,0,1,0,senior,1,20
+ChickenPremireMeal,premire,lg,1,1,0,0,junior,5,30
+muttonBuriyani,main,xl,2,1,0,4,senior,5,41
+mixedChopsy,main,lg,1,0,1,3,senior,4,35
+tacos,bites,xl,3,1,0,0,junior,2.5,15
+chickenKotthu,main,nm,5,1,0,0,senior,6,30
+fishandChips,bites,xl,2,1,0,0,junior,2.5,26
+chickenBuriyani,main,nm,2,1,0,3,junior,4.5,60
+roastedChicken,main,nm,4,1,0,2,junior,3,23
+Tuna Club Sandwich,appetizer,nm,2,1,0,4,senior,1,14
+Tuna Club Sandwich,appetizer,lg,5,1,0,3,junior,2,19
+cheeseKotthu,main,lg,3,1,0,2,senior,2,20
+samosa,bites,nm,1,0,1,0,junior,1,5
+SweetandsourPork,main,xl,2,1,0,3,senior,7,55
+devilledPork,main,xl,4,1,0,2,junior,1.5,35
+chickenlasange,main,nm,1,1,0,4,youg,2,35
+vegroti,bites,xl,3,0,1,2,junior,1,10
+fishandChips,bites,xl,1,1,0,0,senior,5,30
+cuttleFishDevil ,bites,xl,3,1,0,4,junior,5,50
+Pancaces,appetizer,sm,2,0,1,1,junior,1,13
+RoyalBurgerMeal,bonus,lg,2,1,0,0,junior,3.5,35
+roastedCrabs,appetizer,nm,4,1,0,2,junior,1,23
+chickenKotthu,main,nm,4,1,0,6,senior,2,34
+muttonBuriyani,main,xl,1,1,0,2,senior,5.5,45
+devilledChicken,main,xl,1,1,0,2,senior,5,40
+breadPudding,dessert,nm,8,0,1,3,junior,2,40
+noodlesKothu,main,xl,2,1,0,2,junior,2,19
+Vegetable spring roll,bites,xl,10,0,1,5,senior,4.5,35
+cuttleFishDevil ,bites,nm,3,1,0,2,junior,3,40
+chickenBurger,main,nm,2,1,0,2,senior,1,10
+chickenWings,bites,lg,8,1,0,0,senior,1.5,20
+beeflasange,main,nm,5,1,0,2,senior,2,38
+cheeseKotthu,main,xl,2,1,0,2,junior,1.5,18
+devilledPork,main,nm,1,1,0,3,senior,2.5,30
+chickenKotthu,main,nm,2,1,0,2,junior,1,13
+chickenKotthu,main,nm,1,1,0,1,junior,0,12
+beeflasange,main,nm,3,1,0,2,junior,2.5,38
+cheeseSpagetti,main,xl,3,0,1,0,junior,1.5,49
+chips,bites,nm,4,0,1,3,senior,2,22
+Pancaces,appetizer,sm,2,0,1,1,junior,1,10
+vegBurger,main,nm,3,0,1,1,senior,2,17
+chickenBuriyani,main,xl,5,1,0,4,junior,9,70
+chickenpasta,main,nm,6,1,0,4,senior,2.5,28
+hoppers,bites,nm,20,0,1,1,junior,1,11
+chickenFriedRice,main,xl,4,1,0,0,senior,6,40
+bbqChicken,bites,nm,2,1,0,6,junior,2,25
+chickenSalad,bites,xl,1,0,1,4,junior,1,20
+submarine,appetizer,xl,3,1,0,4,senior,3,20
+chickenlasange,main,nm,3,1,0,2,senior,1,30
+mango pudding,dessert,nm,3,0,1,2,junior,3,28
+chickenBuriyani,main,lg,1,1,0,2,senior,3,43
+mongolianRice,main,xl,2,1,0,1,senior,4,40
+vegChopsy,appetizer,nm,5,0,1,0,senior,3,20
+cheeseKotthu,main,nm,4,1,0,3,junior,4,30
+savana,premire,lg,1,1,0,1,senior,6.5,50
+ fried noodles with vegetables ,main,xl,4,0,1,3,junior,4,50
+egg fried rice,main,lg,1,1,0,2,senior,4.5,35
+samosa,bites,lg,10,0,1,0,senior,3,35
+cheeseSpagetti,main,lg,1,0,1,1,senior,4.5,35
+chickenBuriyani,main,nm,1,1,0,4,junior,1,40
+fried beef with pickle chili,main,nm,1,1,0,0,junior,5,40
+chickenpasta,main,lg,1,1,0,1,junior,1,15
+sausagePizza,main,nm,8,1,0,0,senior,5,35
+vegPizza,main,lg,2,0,1,1,senior,2,28
+breadPudding,dessert,nm,5,0,1,4,junior,7,40
+portuguseOmlet,bites,lg,2,1,0,2,senior,1,8
+fried beef with pickle chili,main,lg,1,1,0,1,junior,5,55
+ChickenPremireMeal,premire,lg,2,1,0,2,junior,3,40
+chickenFriedRice,main,nm,1,1,0,1,junior,1,25
+lampris,main,xl,2,1,0,2,junior,4.5,35
+vegChopsy,main,xl,2,0,1,0,junior,6,40
+ChickenPremireMeal,premire,nm,1,1,0,3,senior,5.5,40
+devilledChicken,main,nm,4,1,0,3,junior,1,30
+SweetandsourPork,main,lg,1,1,0,3,senior,7,45
+eggroti,bites,lg,1,1,0,1,senior,1,16
+chickenSalad,bites,nm,5,0,1,1,senior,4,15
+devilledPork,main,nm,8,1,0,3,senior,4.5,40
+seafoodChopsey,main,nm,3,1,0,2,junior,2,30
+chickenPizza,main,lg,1,1,0,2,junior,0.5,20
+roastedChicken,main,xl,8,1,0,1,senior,6,55
+chickenPizza,main,xl,2,1,0,2,senior,1,40
+lavaCake,dessert,nm,3,0,1,2,junior,1,25
+Beef Shawarma,bites,lg,3,1,0,2,senior,0,23
+applePie,dessert,nm,15,0,1,0,junior,4,45
+ fried noodles with vegetables ,main,lg,1,0,1,7,junior,8,60
+devilledPork,main,lg,3,1,0,2,junior,5,40
+noodlesChopsy,main,nm,2,1,0,0,junior,2,28
+chickenSalad,bites,lg,3,0,1,1,senior,5,10
+mixedChopsy,main,xl,2,1,0,3,senior,5,45
+fried beef with pickle chili,main,lg,3,1,0,0,senior,6.5,60
+garlicBread,bites,nm,10,0,1,2,junior,1,22
+samosa,bites,nm,1,0,1,0,junior,1,5
+seafoodChopsey,main,lg,2,1,0,3,senior,5,40
+roastedCrabs,appetizer,nm,5,1,0,1,senior,2,25
+devilledChicken,main,xl,1,1,0,2,senior,1,40
+garlicNaan,bites,xl,3,0,1,1,senior,2,26
+tacos,bites,lg,1,1,0,1,senior,1,13
+beefBurger,main,lg,10,1,0,0,junior,3,45
+vegetalbleKotthu,main,nm,1,0,1,4,junior,1.5,17
+chickenlasange,main,nm,1,1,0,4,youg,4.5,35
+devilledCuttlefish,bites,xl,5,1,0,1,junior,2,30
+samosa,bites,nm,1,0,1,0,junior,1,5
+chickenWrap,appetizer,lg,4,1,0,2,senior,0,20
+chickenWrap,appetizer,nm,1,1,0,2,junior,0.5,14
+Hot butter mushroom,appetizer,nm,5,0,1,0,senior,3,17
+muttonBuriyani,main,nm,3,1,0,0,junior,2,34
+sausagePizza,main,xl,1,1,0,0,senior,3,23
+beefBurger,main,nm,10,1,0,6,senior,2,35
+RoyalBurgerMeal,bonus,xl,1,1,0,3,senior,4,40
+devilledChicken,main,lg,2,1,0,1,senior,2,35
+chips,bites,lg,2,0,1,2,junior,2,15
+vegPizza,main,xl,1,0,1,1,senior,2,30
+garlicBread,bites,lg,10,0,1,0,junior,3,25
+cheeseSpagetti,main,nm,2,0,1,2,junior,1,30
+eggroti,bites,nm,1,1,0,0,junior,0.5,8
+Beef Shawarma,bites,xl,1,1,0,0,junior,2,15
+beefBurger,main,lg,3,1,0,3,senior,2.5,30
+mixedFriedRice,main,nm,1,1,0,0,junior,2,15
+vegSalad,bites,nm,2,0,1,0,junior,0,5
+vegroti,bites,nm,1,0,1,0,junior,0,3
+tacos,bites,nm,10,1,0,6,senior,3,40
+vegSalad,bites,xl,1,0,1,2,senior,2,25
+fried beef with pickle chili,main,nm,2,1,0,2,senior,7.5,70
+SweetandsourPork,main,lg,1,1,0,0,junior,3,30
+Hot butter mushroom,appetizer,lg,2,0,1,1,senior,3,14
+sausages,bites,xl,20,1,0,5,senior,7,50
+lavaCake,dessert,nm,3,0,1,4,senior,2,25
+cheeseSpagetti,main,lg,1,0,1,3,junior,2,40
+garlicNaan,bites,xl,3,0,1,1,senior,2,26
+cuttleFishDevil ,bites,lg,2,1,0,2,senior,5.5,55
+egghoppers,bites,nm,10,1,0,0,junior,1,15
+beefBurger,main,nm,3,1,0,0,senior,0,15
+Beef Shawarma,bites,xl,1,1,0,0,junior,1,14
+chickenPizza,main,nm,4,1,0,0,junior,1,20
+chickenFriedRice,main,nm,1,1,0,0,junior,0,20
+noodlesChopsy,main,xl,1,1,0,2,junior,6,40
+ fried noodles with vegetables ,main,lg,4,0,1,0,junior,0.5,30
+sausages,bites,nm,10,1,0,4,junior,2,20
+devilledPork,main,lg,5,1,0,3,junior,6,45
+mango pudding,dessert,lg,1,0,1,0,junior,1,19
+vegPizza,main,lg,1,0,1,0,senior,1,15
+garlicBread,bites,nm,5,0,1,1,senior,0.5,13
+lampris,main,xl,2,1,1,0,senior,2,30
+Tuna Club Sandwich,appetizer,nm,7,1,0,2,junior,1.5,21
+chickenKotthu,main,xl,1,1,0,1,senior,2,12
+cuttleFishDevil ,bites,xl,4,1,0,3,junior,2,50
+chickpea,appetizer,nm,2,0,1,4,junior,1,25
+chickenlasange,main,lg,4,1,0,2,senior,4.5,55
+chickenlasange,main,nm,1,1,0,1,senior,2,25
+savana,premire,nm,2,1,0,2,junior,2,34
+mongolianRice,main,nm,5,1,0,0,senior,4,35
+beeflasange,main,xl,2,1,0,3,junior,3.5,47
+chickenBuriyani,main,xl,2,1,0,1,senior,3,50
+hoppers,bites,nm,20,0,1,1,junior,1,11
+vegPizza,main,nm,3,0,1,0,junior,1.5,24
+fishandChips,bites,nm,4,1,0,2,senior,3,25
+chickenBurger,main,xl,4,1,0,4,junior,2,20
+submarine,appetizer,xl,2,1,0,1,junior,1,15
+chickpea,appetizer,lg,4,0,1,2,senior,5,35
+ fried noodles with vegetables ,main,nm,5,0,1,2,senior,5,60
+mixedFriedRice,main,nm,3,1,0,3,junior,3,25
+Sweet and sour pork,main,nm,2,0,0,0,senior,4,31
+ fried noodles with vegetables ,main,nm,4,0,1,1,senior,1,36
+Hot butter mushroom,appetizer,nm,8,0,1,2,junior,3.5,30
+Hot butter mushroom,appetizer,nm,3,0,1,1,junior,2,12
+chickenPizza,main,nm,5,1,0,1,junior,2,25
+vegBurger,main,xl,1,0,1,2,senior,1,20
+bbqChicken,bites,lg,3,1,0,3,junior,5,35
+chickenFriedRice,main,lg,1,1,0,0,junior,0,25
+mongolianRice,main,lg,3,1,0,3,junior,7,50
+lavaCake,dessert,lg,5,0,1,3,junior,1,17
+Sweet and sour pork,main,nm,5,1,0,1,senior,7,46
+vegChopsy,appetizer,xl,2,0,1,0,junior,2.5,20
+mixedChopsy,main,nm,2,0,1,3,junior,2,25
+sausagePizza,main,nm,2,1,0,3,junior,2,30
+vegChopsy,appetizer,xl,1,0,1,3,junior,2,25
+chickenSalad,bites,lg,4,0,1,2,senior,1,18
+bbqChicken,bites,lg,10,1,0,1,senior,3,60
+Sweet and sour pork,main,nm,2,1,0,2,junior,4,41
+bbqChicken,bites,xl,10,1,0,2,junior,7,65
+Tuna Club Sandwich,appetizer,lg,3,1,0,2,senior,2,16
+fishandChips,bites,xl,3,1,0,3,junior,6,40
+chickenFriedRice,main,nm,3,1,0,0,senior,4.5,28
+noodlesChopsy,main,lg,3,1,0,1,senior,5,35
+applePie,dessert,xl,2,0,0,2,junior,2,16
+fishandChips,bites,lg,5,1,0,5,junior,1,35

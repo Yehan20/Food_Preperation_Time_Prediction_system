@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+            width: 200px;
+            height: 200px;
+        }
+        
+        input{
+            display: block;
+            background-color: antiquewhite;
+            padding: 1em 0.5em;
+            outline: 0;
+            border: 0;
+        }
+        form{
+            max-width: 500px;
+            padding: 1em;
+            margin: 0 auto;
+          
+        }
+        form div{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{href}}" alt="Phoneix" />
+    <form method="POST">
+       <div class="">Name<input type="text" name="food_name"></div>
+       <div class="">Type<input type="text"></div>
+       <div class="">Size<input type="text"></div>
+       <div class="">Amount<input type="text"></div>
+       <div class="">Veg<input type="text"></div>
+       <div class="">Non Veg<input type="text"></div>
+       <div class="">Queded Order<input type="text"></div>
+       <div class="">age<input type="text"></div>
+
+       <input type="submit" value="Submit">
+    </form>
+    <h2>"{{name}}"</h2>
+</body>
+</html>
