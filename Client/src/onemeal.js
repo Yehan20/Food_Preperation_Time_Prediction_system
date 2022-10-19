@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams,Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Axios from "axios";
 
 
@@ -23,10 +23,16 @@ const SpecificMeal = () => {
 
     const [data, setData] = useState('');
     const [time, setTime] = useState('');
-    const day = new Date().getHours() * 60 + new Date().getMinutes()
-    // console.log("local day : "+day)
 
-    function timeConvert(minutes) {
+    const [real, setReal] = useState('')
+    useEffect(() => {
+        let abc = hrs + 8
+        setReal(abc)
+        setDay(60 * abc)
+    }, [hrs])
+    const [day, setDay] = useState(new Date().getHours() * 60 + new Date().getMinutes())
+
+    const timeConvert = (minutes) => {
         let num = minutes;
         let hours = (num / 60);
         let rhours = Math.floor(hours);
@@ -44,7 +50,7 @@ const SpecificMeal = () => {
 
     const findTime = (e) => {
         e.preventDefault();
-       
+
 
         Axios.post('/time', {
 
@@ -75,7 +81,7 @@ const SpecificMeal = () => {
 
 
     const getMeal = () => {
-        Axios.get('http://localhost:3001/api/get-one/' + id).then((result) => {
+        Axios.get('http://localhost:3001/meals/meal/' + id).then((result) => {
 
             setMeal(result.data[0])
             setFoodName(result.data[0].name)
@@ -86,27 +92,27 @@ const SpecificMeal = () => {
     }
 
     const IncompleteOrders = () => {
-        Axios.get('http://localhost:3001/api/get-incomplete-orders').then((result) => {
- 
+        Axios.get('http://localhost:3001/orders/get-incomplete-orders').then((result) => {
+
             setincompleteOrds(result.data)
 
         }).catch(err => console.log(err))
     }
 
-    const makeOrder = ()=>{
-        Axios.post('http://localhost:3001/api/add-order',{  
+    const makeOrder = () => {
+        Axios.post('http://localhost:3001/orders/add-order', {
             foodName,
             foodAmt,
             size,
             exp
-          
 
-        }).then((result)=>{
+
+        }).then((result) => {
             if (result.statusText === "OK") {
-              console.log('order')
-              IncompleteOrders()
-            }  
-        }).catch(err=>console.log(err))
+                console.log('order')
+                IncompleteOrders()
+            }
+        }).catch(err => console.log(err))
     }
 
     return (
@@ -114,8 +120,8 @@ const SpecificMeal = () => {
             <div className="zoomedCard " key={meal.id}>
                 <div className="info">
                     <div className="d-flex align-items-center justify-content-between">
-                    <h2>{meal.name}</h2>
-                    <Link to='/food-time' className='btn btn-danger'>Back</Link>
+                        <h2>{meal.name}</h2>
+                        <Link to='/viewFood' className='btn btn-danger'>Back</Link>
                     </div>
                     <img src={meal.src} className='img-fluid' alt="name" />
                     <h3>{meal.category}</h3>
@@ -135,7 +141,7 @@ const SpecificMeal = () => {
                             <div className="mb-3 w-100">
                                 <label className="form-label">Placing Order Time Slot</label>
                                 {/* <input type="number" className="form-control" id="exampleFormControlInput1" onChange={(e) => sethrs(e.target.value)} /> */}
-                                <select className="form-select" required aria-label="Default select example"onChange={(e) => sethrs(e.target.value - 8)}>
+                                <select className="form-select" required aria-label="Default select example" onChange={(e) => sethrs(e.target.value - 8)}>
                                     <option value="" hidden>Choose</option>
                                     <option value={new Date().getHours()}>Right Now</option>
                                     <option value="8">8:00 - 8:30</option>
@@ -153,7 +159,7 @@ const SpecificMeal = () => {
                                     <option value="20">20:00 - 20:30</option>
                                     <option value="21">21:00 - 21:30</option>
                                     <option value="22">22:00 - 22:30</option>
-               
+
                                 </select>
                             </div>
                         </div>

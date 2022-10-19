@@ -36,7 +36,7 @@ const AddFood = () => {
         formData.append("veg", veg);
 
         try {
-            const res = await Axios.post('http://localhost:3001/api/insert',
+            const res = await Axios.post('http://localhost:3001/meals/add',
                 formData
             )
 
@@ -61,7 +61,7 @@ const AddFood = () => {
             <form onSubmit={(e)=>add(e)}>
                 <div className="mb-3 w-100">
                     <label className="form-label">Food Name</label>
-                    <input type="text" className="form-control" id="exampleFormControlInput1" onChange={(e) => setFoodName(e.target.value)} />
+                    <input required type="text" className="form-control" id="exampleFormControlInput1" onChange={(e) => setFoodName(e.target.value)} />
                 </div>
                 <div className="mb-3 w-100">
                     <label className="form-label">Food Category</label>
@@ -77,7 +77,7 @@ const AddFood = () => {
 
                 <div className="mb-3 w-100">
                     <label className="form-label">Veg/Non Vegg</label>
-                    <select className="form-select" aria-label="Default select example" onChange={(e) => setVeg(e.target.value)}>
+                    <select required className="form-select" aria-label="Default select example" onChange={(e) => setVeg(e.target.value)}>
                        <option value="" hidden>Choose</option>
                         <option value="1">Veg</option>
                         <option value="0">Non-Veg</option>
@@ -87,20 +87,20 @@ const AddFood = () => {
 
                 <div className="mb-3 w-100">
                     <label className="form-label">Food Price</label>
-                    <input type="number" className="form-control" id="exampleFormControlInput1" onChange={(e) => setFoodPrice(e.target.value)} />
+                    <input required type="number" className="form-control" id="exampleFormControlInput1" onChange={(e) => setFoodPrice(e.target.value)} />
                 </div>
                 <div className="mb-3 w-100">
                     <label className="form-label">Description</label>
-                    <textarea className="form-control" id="exampleFormControlInput1" onChange={(e) => setFoodDesc(e.target.value)} ></textarea>
+                    <textarea required className="form-control" id="exampleFormControlInput1" onChange={(e) => setFoodDesc(e.target.value)} ></textarea>
                 </div>
 
 
                 <div className="mb-3 w-100">
-                    <input type="file" onChange={(e) => saveFile(e)} />
+                    <input required type="file" onChange={(e) => saveFile(e)} />
                 </div>
 
                 <div className='mb-3 w-100'>
-                    <input type="submit" className="btn btn-success text-white w-100" value="Submit" />
+                    <input required type="submit" className="btn btn-success text-white w-100" value="Submit" />
                 </div>
             </form>
 

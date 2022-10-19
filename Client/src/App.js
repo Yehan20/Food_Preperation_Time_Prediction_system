@@ -17,8 +17,9 @@ function App() {
             <FoodList />
           </Route>
          </Switch>
+
         <Switch>
-          <Route path='/food-time'>
+          <Route path='/viewfood'>
             <Food />
           </Route>
         </Switch>

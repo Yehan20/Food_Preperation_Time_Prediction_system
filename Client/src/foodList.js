@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios'
 import { Link } from 'react-router-dom'
+import useCustomFetch from './useCustomFetch';
 
 const FoodList = () => {
-    const [meals, setMeals] = useState([])
-    useEffect(() => {
-        getMeals()
-    }, [])
+    const {meals}=useCustomFetch('http://localhost:3001/meals')
+    // useEffect(() => {
+    //     getMeals()
+    //     return ()=>setMeals([])
+    // }, [])
 
-    const getMeals = () => {
-        Axios.get('http://localhost:3001/api/get').then((result) => {
+    // const getMeals = () => {
+    //     Axios.get('http://localhost:3001/meals').then((result) => {
 
-            setMeals(result.data)
+    //         setMeals(result.data)
 
-        }).catch(err => console.log(err))
-    }
+    //     }).catch(err => console.log(err))
+    // }
 
     return (
 
