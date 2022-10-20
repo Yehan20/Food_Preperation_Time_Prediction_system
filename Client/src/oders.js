@@ -35,7 +35,7 @@ const Orders = () => {
                 <div className="d-flex mb-3">
    
                     <Link className="btn btn-primary me-3" to='/add-food'>Add Food</Link>
-                    <Link className="btn btn-success" to='/'>Back</Link>
+                    <Link className="btn btn-success" to='/admin-home'>Back</Link>
                 </div>
                 <table className="table">
                     <thead>

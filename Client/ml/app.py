@@ -20,8 +20,7 @@ def convertCategory(foodCategory):
     return 4
   elif foodCategory == "appetizer":
     return 0
-  elif foodCategory == "premier":
-    return 5
+
 
 def convertSize(size):
     if size=="nm":
@@ -29,7 +28,7 @@ def convertSize(size):
     elif size=="lg":
         return 0
     elif size=='xl':
-        return 3        
+        return 2        
 
 def convertExp(exp):
     if exp=='senior':

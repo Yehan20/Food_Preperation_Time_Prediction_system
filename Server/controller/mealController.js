@@ -10,6 +10,18 @@ const viewMeals =(req,res)=>{
     })
 }
 
+const FilterMeals =(req,res)=>{
+    const foodCategory=req.body.foodCategory
+    let query= "SELECT * FROM food_item where  category=?";
+    db.query(query,foodCategory,(err,result)=>{
+        res.send(result)
+        if(err){
+            console.log(err)
+           }
+    })
+}
+
+
 const viewMeal=(req,res)=>{
     let id=req.params.id;
     console.log(id);
@@ -42,5 +54,5 @@ const addMeal = (req,res)=>{
     
 }
 module.exports={
-    viewMeals,viewMeal,addMeal
+    viewMeals,viewMeal,addMeal,FilterMeals
 }

@@ -4,43 +4,6 @@ import Axios from "axios";
 
 
 const SpecificMeal = () => {
-
-    const { id } = useParams()
-    const [meal, setMeal] = useState({})
-    const [canOrder, setcanOrder] = useState(false)
-
-    const [foodName, setFoodName] = useState('')
-    const [foodAmt, setFoodAmt] = useState('')
-    const [hrs, sethrs] = useState('')
-    const [incompleteOrdrs, setincompleteOrds] = useState('')
-    const [category, setCategory] = useState('')
-    const [size, setSize] = useState('')
-    const [veg, setVeg] = useState('')
-    const [exp, setExp] = useState('')
-    const [nonVeg, setNonVeg] = useState('')
-
-
-
-    const [data, setData] = useState('');
-    const [time, setTime] = useState('');
-
-    const [real, setReal] = useState('')
-    useEffect(() => {
-        let abc = hrs + 8
-        setReal(abc)
-        setDay(60 * abc)
-    }, [hrs])
-    const [day, setDay] = useState(new Date().getHours() * 60 + new Date().getMinutes())
-
-    const timeConvert = (minutes) => {
-        let num = minutes;
-        let hours = (num / 60);
-        let rhours = Math.floor(hours);
-        var minutes = (hours - rhours) * 60;
-        var rminutes = Math.round(minutes);
-        return " Food will be avaiable at  " + rhours + ":" + rminutes + "";
-    }
-
     useEffect(() => {
         getMeal()
         IncompleteOrders()
@@ -48,10 +11,53 @@ const SpecificMeal = () => {
     }, [])
 
 
+
+
+    const { id } = useParams()
+   
+    // Data for the AI model
+    const [meal, setMeal] = useState({})
+    const [foodName, setFoodName] = useState('')
+    const [category, setCategory] = useState('')
+    const [size, setSize] = useState('')
+    const [foodAmt, setFoodAmt] = useState('')
+    const [veg, setVeg] = useState('')
+    const [nonVeg, setNonVeg] = useState('')
+    const [incompleteOrdrs, setincompleteOrds] = useState('')
+    const [exp, setExp] = useState('')
+    const [hrs, sethrs] = useState('')
+
+
+    const [canOrder, setcanOrder] = useState(false)
+    const [ordered,setOrdered]=useState(false)
+  
+
+    const [data, setData] = useState('');
+    const [time, setTime] = useState('');
+    const [real, setReal] = useState('')
+    const [day, setDay] = useState(new Date().getHours() * 60 + new Date().getMinutes())
+
+    useEffect(() => {
+        let resturant_open_hrs = hrs + 8
+        setReal(resturant_open_hrs)
+        setDay(60 * resturant_open_hrs)
+    }, [hrs])
+
+
+    const timeConvert = (min) => {
+        let num = min;
+        let hours = (num / 60);
+        let rhours = Math.floor(hours);
+        let minutes = (hours - rhours) * 60;
+        let rminutes = Math.round(minutes);
+        return " Food will be avaiable at  " + rhours + ":" + rminutes + "";
+    }
+
+
+
+    // Sending the data to the machne learning model in our flask serverr
     const findTime = (e) => {
         e.preventDefault();
-
-
         Axios.post('/time', {
 
             foodName,
@@ -71,11 +77,11 @@ const SpecificMeal = () => {
 
                 setData(newTime);
                 setTime(Math.round(result.data));
-                setcanOrder(!canOrder)
+                setcanOrder(true)
+                setOrdered(false)
 
             }
         }).catch((error) => console.log(error))
-
     }
 
 
@@ -109,8 +115,9 @@ const SpecificMeal = () => {
 
         }).then((result) => {
             if (result.statusText === "OK") {
-                console.log('order')
                 IncompleteOrders()
+                setOrdered(true)
+                
             }
         }).catch(err => console.log(err))
     }
@@ -136,12 +143,12 @@ const SpecificMeal = () => {
 
                             <div className="mb-3 w-100">
                                 <label className="form-label">Food Amount</label>
-                                <input type="number" className="form-control" id="exampleFormControlInput1" onChange={(e) => setFoodAmt(e.target.value)} />
+                                <input required  type="number" className="form-control" id="exampleFormControlInput1" onChange={(e) => setFoodAmt(e.target.value)} />
                             </div>
                             <div className="mb-3 w-100">
                                 <label className="form-label">Placing Order Time Slot</label>
-                                {/* <input type="number" className="form-control" id="exampleFormControlInput1" onChange={(e) => sethrs(e.target.value)} /> */}
-                                <select className="form-select" required aria-label="Default select example" onChange={(e) => sethrs(e.target.value - 8)}>
+                            
+                                <select required  className="form-select" aria-label="Default select example" onChange={(e) => sethrs(e.target.value - 8)}>
                                     <option value="" hidden>Choose</option>
                                     <option value={new Date().getHours()}>Right Now</option>
                                     <option value="8">8:00 - 8:30</option>
@@ -168,7 +175,7 @@ const SpecificMeal = () => {
 
                             <div className="mb-3 w-100">
                                 <label className="form-label">Food Size</label>
-                                <select className="form-select" required aria-label="Default select example" onChange={(e) => setSize(e.target.value)}>
+                                <select required  className="form-select"  aria-label="Default select example" onChange={(e) => setSize(e.target.value)}>
                                     <option value="" hidden>Choose</option>
                                     <option value="nm">Normal (NM)</option>
                                     <option value="lg">Large (LG)</option>
@@ -179,21 +186,30 @@ const SpecificMeal = () => {
                         <div className="d-flex">
                             <div className="mb-3 w-100">
 
-                                <label className="form-label">Chef experience</label>
-                                <select className="form-select" required aria-label="Default select example" onChange={(e) => setExp(e.target.value)}>
+                                <label className="form-label">Choose Cheif experience</label>
+                                <select  required className="form-select"  aria-label="Default select example" onChange={(e) => setExp(e.target.value)}>
                                     <option value="" hidden> Choose a Chef</option>
                                     <option value="junior">👨‍🍳 Cheif</option>
                                     <option value="senior">👨‍🍳 Cheif 2 </option>
                                 </select>
                             </div>
                         </div>
-                        <div className="d-flex">
-                            <button className="btn btn-primary w-100 text-white" type='submit'>
-                                Predict Time
-                            </button>
-                            <button className="btn btn-success w-100 text-white" disabled={!canOrder && true} type='button' onClick={makeOrder}>
-                                Order
-                            </button>
+                        <div className="">
+                            <div className="d-flex">
+                                <button className="btn btn-primary w-100 text-white" type='submit'>
+                                    Predict Time
+                                </button>
+                            
+                              
+                                   
+                                    <button className="btn btn-success w-100 text-white" title={canOrder?'You need to Check the Time first!!':''} disabled={!canOrder && true} type='button' onClick={makeOrder}>
+                                    Order
+                                </button>
+
+                               
+                            </div>
+
+                            { !canOrder &&<p className="text-danger text-center mt-3">Please Find the Ready time to Make order</p> }
 
                         </div>
 
@@ -202,6 +218,9 @@ const SpecificMeal = () => {
                                 Your meal would take <span className="text-danger">{time}</span> minutes to be made <br />
                                 and <span className="text-primary">{data}</span>
                             </p>
+                        }
+                        {
+                            ordered && <p className="text-center text-primary text-bold text-lg">Order Placed </p>
                         }
 
                     </form>

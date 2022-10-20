@@ -4,19 +4,8 @@ import { Link } from 'react-router-dom'
 import useCustomFetch from './useCustomFetch';
 
 const FoodList = () => {
-    const {meals}=useCustomFetch('http://localhost:3001/meals')
-    // useEffect(() => {
-    //     getMeals()
-    //     return ()=>setMeals([])
-    // }, [])
+    const {meals,error}=useCustomFetch('http://localhost:3001/meals')
 
-    // const getMeals = () => {
-    //     Axios.get('http://localhost:3001/meals').then((result) => {
-
-    //         setMeals(result.data)
-
-    //     }).catch(err => console.log(err))
-    // }
 
     return (
 
@@ -26,7 +15,9 @@ const FoodList = () => {
                 <Link to='/orders' className='btn btn-success'>Complete Orders</Link>
             </div>
             <div className="meal-box">
-                {
+                {error && <h2 className='text-primary'>Loading ...</h2>}
+                {  
+                !error &&
                     meals.map((meal) => {
                         const { name, category, src, description, price, id } = meal
                         return <div className='card w-100' key={id}>
@@ -40,6 +31,7 @@ const FoodList = () => {
                         </div>
                     })
                 }
+                
             </div>
 
         </div>

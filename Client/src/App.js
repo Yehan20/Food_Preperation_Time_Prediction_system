@@ -1,20 +1,48 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Food from './food';
 import AddFood from './addFood';
 import SpecificMeal from './onemeal';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import FoodList from './foodList';
 import Orders from './oders';
+import Login from './login';
+import SignUp from './signUp';
+import NavBar from './landing';
+import Footer from './footer';
+import About from './about';
+
+
 
 function App() {
 
   return (
     <Router>
       <main>
-        <h1 className='text-center'>Food Labs (FPT) System</h1>
+        <NavBar/>
+        <h1 className='text-center'>Food Labs</h1>
         <Switch>
           <Route exact path='/'>
+             <About/>
+           
+          </Route>
+         </Switch>
+
+  
+        <Switch>
+          <Route  path='/admin-home'>
             <FoodList />
+          </Route>
+         </Switch>
+
+         <Switch>
+          <Route path='/login'>
+             <Login/>
+          </Route>
+         </Switch>
+
+         <Switch>
+          <Route path='/sign-up'>
+             <SignUp/>
           </Route>
          </Switch>
 
@@ -42,6 +70,7 @@ function App() {
           </Route>
         </Switch>
       </main>
+      <Footer/>
     </Router>
 
   )

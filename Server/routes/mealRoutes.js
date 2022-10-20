@@ -20,6 +20,7 @@ router.post('/meals/add', upload.single('file'),mealController.addMeal)
 
 router.get('/meals',mealController.viewMeals)
 
+router.get('/meals/filter',mealController.FilterMeals)
 
 router.get('/meals/meal/:id',mealController.viewMeal)
 
