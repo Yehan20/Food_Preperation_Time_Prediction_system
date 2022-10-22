@@ -24,7 +24,7 @@ const FilterMeals =(req,res)=>{
 
 const viewMeal=(req,res)=>{
     let id=req.params.id;
-    console.log(id);
+
     let query= "SELECT * FROM food_item where id=?";
     db.query(query,id,(error,result)=>{
         res.send(result)
@@ -41,8 +41,8 @@ const addMeal = (req,res)=>{
 
     // console.log(req.body)
 
-    var imgsrc = '/uploads/' + req.body.fileName
-    console.log(imgsrc);
+    let imgsrc = '/uploads/' + req.body.fileName
+  
     
     let query="INSERT INTO food_item(name,category,price,description,src,veg) VALUES (?,?,?,?,?,?)";
     db.query(query,[foodName,foodCategory,foodPrice,foodDesc,imgsrc,vegNonVeg],(err,result)=>{

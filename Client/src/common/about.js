@@ -1,5 +1,5 @@
 import React from "react";
-import useCustomFetch from './useCustomFetch';
+import useCustomFetch from '../custom-hooks/useCustomFetch';
 const About = () => {
     const {meals,error}=useCustomFetch('http://localhost:3001/meals')
     return (

@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Food from './food';
-import AddFood from './addFood';
-import SpecificMeal from './onemeal';
-import FoodList from './foodList';
-import Orders from './oders';
-import Login from './login';
-import SignUp from './signUp';
-import NavBar from './landing';
-import Footer from './footer';
-import About from './about';
+import Food from './components/food';
+import AddFood from './components/addFood';
+import SpecificMeal from './components/onemeal';
+import FoodList from './components/foodList';
+import Orders from './components/oders';
+import Login from './common/login';
+import SignUp from './common/signUp';
+import NavBar from './common/landing';
+import Footer from './common/footer';
+import About from './common/about';
 
 
 

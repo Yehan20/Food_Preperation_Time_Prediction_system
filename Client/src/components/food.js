@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Meal from './meal';
-import useCustomFetch from './useCustomFetch';
+import useCustomFetch from '../custom-hooks/useCustomFetch';
 
 
 const Food = (props) => {

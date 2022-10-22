@@ -39,7 +39,7 @@ const makeOrder=(req,res)=>{
 
 const completeOrder=(req,res)=>{
     id= req.body.order.order_id
-    console.log('id is',id);
+
    
     let query = "UPDATE orders SET status='completed' where order_id=?";
     db.query(query,[id],(err,result)=>{

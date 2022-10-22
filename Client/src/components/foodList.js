@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios'
 import { Link } from 'react-router-dom'
-import useCustomFetch from './useCustomFetch';
+import useCustomFetch from '../custom-hooks/useCustomFetch';
 
 const FoodList = () => {
     const {meals,error}=useCustomFetch('http://localhost:3001/meals')

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
@@ -8,7 +8,7 @@ const NavBar = () => {
             <div className="container-fluid">
                 <div className="row">
                   
-                    <div className="col-12 col-sm-9 col-md-8 p-0">
+                    <div className="col-12 p-0">
                         <nav className="navbar navbar-expand-md p-0  ">
                             <a className="navbar-brand d-block d-md-none" href="#">Menu</a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -51,7 +51,7 @@ const NavBar = () => {
             <div className="carousel-inner">
        
               <div className="carousel-item active">
-                <img className="d-block w-100" src="slider-img/slider-1.jpg" alt='Image' />
+                <img className="d-block w-100" src="../slider-img/slider-1.jpg" alt='Image' />
     
               </div>
     

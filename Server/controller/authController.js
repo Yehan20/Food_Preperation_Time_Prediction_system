@@ -1,4 +1,4 @@
-const e = require('express');
+
 const db = require('../model/db');
 
 const customerLogin = (req, res) => {

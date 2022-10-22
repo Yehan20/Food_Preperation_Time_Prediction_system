@@ -68,7 +68,6 @@ const AddFood = () => {
                     <select required className="form-select" aria-label="Default select example" onChange={(e) => setCategory(e.target.value)}>
                         <option value="" hidden>Choose</option>
                         <option value="main">Main</option>
-                        <option value="premire">Premier</option>
                         <option value="appetizer">Appetizer</option>
                         <option value="dessert">Dessert</option>
                         <option value="bite">Bite</option>
