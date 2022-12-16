@@ -10,6 +10,9 @@ import SignUp from './common/signUp';
 import NavBar from './common/landing';
 import Footer from './common/footer';
 import About from './common/about';
+import NotFound from './common/notFound';
+import UserOrders from './components/userOrders';
+import PrivateRoute from './components/privateroute';
 
 
 
@@ -18,59 +21,44 @@ function App() {
   return (
     <Router>
       <main>
-        <NavBar/>
+        <NavBar />
         <h1 className='text-center'>Food Labs</h1>
         <Switch>
           <Route exact path='/'>
-             <About/>
-           
+            <About />
           </Route>
-         </Switch>
 
-  
-        <Switch>
-          <Route  path='/admin-home'>
+          <Route path='/admin-home'>
             <FoodList />
           </Route>
-         </Switch>
 
-         <Switch>
           <Route path='/login'>
-             <Login/>
+            <Login />
           </Route>
-         </Switch>
 
-         <Switch>
           <Route path='/sign-up'>
-             <SignUp/>
+            <SignUp />
           </Route>
-         </Switch>
 
-        <Switch>
-          <Route path='/viewfood'>
-            <Food />
-          </Route>
-        </Switch>
+          <PrivateRoute path='/viewfood' component={Food} />
 
-        <Switch>
           <Route path='/add-food'>
             <AddFood />
           </Route>
-        </Switch>
 
-        <Switch>
           <Route path='/orders'>
-            <Orders/>
+            <Orders />
           </Route>
-        </Switch>
 
-        <Switch>
-          <Route path='/order-food/:id'>
-            <SpecificMeal />
+           <PrivateRoute path='/order-food' component={SpecificMeal} />
+           <PrivateRoute path='/user-Orders' component={UserOrders} />
+
+          <Route path='*'>
+            <NotFound />
           </Route>
         </Switch>
       </main>
-      <Footer/>
+      <Footer />
     </Router>
 
   )

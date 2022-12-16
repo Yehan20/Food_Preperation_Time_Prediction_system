@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios'
-import { useHistory,Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 const AddFood = () => {
 
@@ -12,7 +12,7 @@ const AddFood = () => {
     const [veg,setVeg]=useState('')
     const [fileName, setFileName] = useState("");
 
-    const history= useHistory()
+    
 
 
     const saveFile = (e) => {
@@ -42,7 +42,7 @@ const AddFood = () => {
 
             if (res.statusText === "OK") {
                 alert('inserted')
-                history.push('/')
+                // history.push('/')
                 // document.querySelector('input').value = ''
             }
 
@@ -54,7 +54,7 @@ const AddFood = () => {
     return (
         <div className='section-2 container-fluid'>
             <div className='d-flex justify-content-center'>
-                <Link to='/' className='btn btn-primary mx-3'>Back</Link>
+                <Link to='/admin-home' className='btn btn-primary mx-3'>Back</Link>
                 <Link to='/orders' className='btn btn-success'>Orders</Link>
             </div>
 
@@ -75,7 +75,7 @@ const AddFood = () => {
                 </div>
 
                 <div className="mb-3 w-100">
-                    <label className="form-label">Veg/Non Vegg</label>
+                    <label className="form-label">Veg/Non Veg</label>
                     <select required className="form-select" aria-label="Default select example" onChange={(e) => setVeg(e.target.value)}>
                        <option value="" hidden>Choose</option>
                         <option value="1">Veg</option>

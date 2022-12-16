@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Axios from 'axios'
 
 
@@ -18,7 +18,12 @@ const useCustomFetch = (url) => {
 
             })
        },1000)
+       return ()=> {
 
+    
+        setMeals([])
+
+       }
     }, [url])
     return {
         meals,error

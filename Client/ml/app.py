@@ -44,25 +44,23 @@ def predictTime():
    request_method_type= request.method
    if(request_method_type=="POST"):
       food_id=0;
-      y=request.json;
+      y=request.json; #post request comming from axios
       
-      #Get JSON File we created when we train our model   
+      #Get JSON File we created when we train our model with the food id is   
       input_file = open ('export.json')
       json_array = json.load(input_file)
 
       name=y["foodName"] # get from the front end
-      print(name)
       foodCategory=y['category']
       foodSize=y['size']
       exp=y['exp']
 
       newName=name.lower().replace(" ","")
-      print(newName)
       newCategory=convertCategory(foodCategory);
       convertedSize=convertSize(foodSize)
       cnvrtdExp=convertExp(exp)
     
-     #   For in loop to assign the respective id for the food item
+     #   For in loop to assign the respective id for the food item which we send from the frotn end
       for item in json_array:
             if(newName==item['name'].lower().replace(" ","")):
                 food_id=item['id']
@@ -70,11 +68,11 @@ def predictTime():
                 break
 
      # Capture food category
-      print('id',food_id)
-    
+
+  
       data=[food_id,newCategory,convertedSize,y["foodAmt"],y["nonVeg"],y["veg"],y["incompleteOrdrs"],cnvrtdExp,y["hrs"]]
       num= np.array([data])
-      print(data)
-      time=model.predict(num.astype(np.float))
+      #   print(num.astype(np.float))
+      time=model.predict(num.astype(np.float)) # make the prediction
       return str(time[0]);
  

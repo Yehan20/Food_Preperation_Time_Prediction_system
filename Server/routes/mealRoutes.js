@@ -24,4 +24,6 @@ router.get('/meals/filter',mealController.FilterMeals)
 
 router.get('/meals/meal/:id',mealController.viewMeal)
 
+router.get('/meals/orders/:userName',mealController.viewOrders)
+
 module.exports=router;

@@ -13,6 +13,8 @@ router.put('/orders/complete-order',orderController.completeOrder)
 
 router.post('/orders/add-order',orderController.makeOrder)
 
+router.put('/orders/cancel-order',orderController.cancelOrder)
+
 
 module.exports=router;
 

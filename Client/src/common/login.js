@@ -8,7 +8,7 @@ const Login = () => {
     const [userName, setuserName] = useState('');
     const [pwd, setPwd] = useState('');
     const [errMsg, seterrMsg] = useState('');
-    const [sucess, setSucess] = useState(false);
+   
 
     const history = useHistory()
 
@@ -25,12 +25,13 @@ const Login = () => {
         }).then((result) => {
       
             if (result.data.length>0) {
-                setSucess(true)
-                console.log('login valide')
-                history.push({
-                    pathname: '/viewFood',
-                    state: userName
-                })
+                console.log('user name coorect');
+                history.push(
+                   '/viewFood',{
+                    state:userName,
+                    auth:true
+                   }
+                )
                 
             }
             else{

@@ -31,6 +31,16 @@ const viewMeal=(req,res)=>{
     })
 }
 
+const viewOrders = (req,res)=>{
+    let name = req.params.userName;
+    db.query("SELECT * FROM orders where username=? and status='ordered'",[name],(error,result)=>{
+        if(!error){
+            res.send(result)
+        }
+        console.log(error)
+    })
+}
+
 const addMeal = (req,res)=>{
        
     const foodName=req.body.foodName
@@ -39,7 +49,6 @@ const addMeal = (req,res)=>{
     const foodDesc=req.body.foodDesc
     const vegNonVeg=req.body.veg
 
-    // console.log(req.body)
 
     let imgsrc = '/uploads/' + req.body.fileName
   
@@ -54,5 +63,5 @@ const addMeal = (req,res)=>{
     
 }
 module.exports={
-    viewMeals,viewMeal,addMeal,FilterMeals
+    viewMeals,viewMeal,addMeal,FilterMeals,viewOrders
 }

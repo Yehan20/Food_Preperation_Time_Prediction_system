@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import Axios from 'axios'
+import React from 'react';
 import { Link } from 'react-router-dom'
 import useCustomFetch from '../custom-hooks/useCustomFetch';
 
 const FoodList = () => {
     const {meals,error}=useCustomFetch('http://localhost:3001/meals')
-
-
     return (
 
         <div className="container">
-            <div className="d-flex justify-content-center">
-                <Link to='/add-food' className='btn btn-primary mx-3'>Add food</Link>
-                <Link to='/orders' className='btn btn-success'>Complete Orders</Link>
+            <div className="d-flex justify-content-center flex-column flex-md-row  gap-2 ">
+  
+                <Link to='/add-food' className='btn btn-primary'>Add food</Link>
+                <Link to='/orders' className='btn btn-success mx-0 mx-md-3'>Complete Orders</Link>
+                <Link to='/' className='btn btn-danger'>Go Home | Logout</Link>
             </div>
             <div className="meal-box">
                 {error && <h2 className='text-primary'>Loading ...</h2>}

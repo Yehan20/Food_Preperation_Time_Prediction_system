@@ -9,58 +9,44 @@ const SignUp = () => {
     const [pwd, setPwd] = useState('');
     const [confirm, setConfirm] = useState('');
     const [errMsg, seterrMsg] = useState('');
-    const [sucess, setSucess] = useState(false);
+    const [sucess, setSucess] = useState(true);
 
     const history = useHistory()
-    const sameUserName=(userName)=>{
-        Axios.post('http://localhost:3001/customer-same-name', {
-            userName,
-        }).then((result) => {
-            if (result.data.length>0) {
-               seterrMsg('User Name exsists')
-               return true;
-                
-            }
-        }).catch((err) => {
-            console.log(err)
-            return false
-        })
-    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
 
         setuserName('')
         setPwd('')
         setConfirm('')
-        if(pwd===confirm){
-            let sameName=sameUserName(userName)
-            console.log(sameName)
-             if(!sameName){
-                Axios.post('http://localhost:3001/customer-sign-in', {
-                    userName,
-                    pwd,
-         
-                }).then((result) => {
-                    if (result.statusText === "OK") {
-                        setSucess(true)
-                        console.log('login valide')
-                        history.push({
-                            pathname: '/login',
-                      
-                        })
-                        
-                    }
-                }).catch(err => console.log(err))
-            }
+        if (pwd === confirm) {
+
+            Axios.post('http://localhost:3001/customer-sign-in', {
+                userName,
+                pwd,
+
+            }).then((result) => {
+                console.log(result)
+                if (result.data.status) {
+                    setSucess(true)
+                    console.log('login valide')
+                    history.push({
+                        pathname: '/login',
+
+                    })
+
+                }
+                else{
+                    setSucess(false)
+                }
+            }).catch(err => console.log(err))
+
         }
-        else{
+        else {
             seterrMsg('passowrd not matching')
         }
-    
+
     }
-
-
-
 
     return (
         <>
@@ -79,7 +65,7 @@ const SignUp = () => {
                                 </div>
                                 <div className="mb-3 w-100">
                                     <label className="form-label">Password</label>
-                                    <input  required type="password" className="form-control" id="exampleFormControlInput1" onChange={(e) => setPwd(e.target.value)}
+                                    <input required type="password" className="form-control" id="exampleFormControlInput1" onChange={(e) => setPwd(e.target.value)}
                                         value={pwd} />
                                 </div>
                                 <div className="mb-3 w-100">
@@ -89,6 +75,9 @@ const SignUp = () => {
                                 </div>
                                 <button className="btn btn-primary">Sign Up</button>
                                 <p className="text-center text-danger">{errMsg}</p>
+                                <div>
+                                    {!sucess && <p className="text-center text-danger">User Name is Taken</p>}
+                                </div>
                             </form>
                         </div>
                     </div>

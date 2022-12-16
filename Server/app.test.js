@@ -1,38 +1,23 @@
 const request=require('supertest')
 const app= require('./controller/mealController')
+const meal= require('./routes/mealRoutes')
+const functions = require('./functions')
 
 
-describe('FTP Api',()=>{
-    it('GET /meals --> array meals',()=>{
-          return request(app)
-          .get('/meals')
-       
-          .expect(200)
-          .then((response)=>{
-             expect(response.body).toEqual(
-                expect.arrayContaining([
-                    expect.objectContaining(
-                        {
-                            name:expect.anyString(),
-                            completed:expect.anyBoolean(),
-                        }
-                    ),
-                ])
-             )
-          })
 
-    })
-    it('GET /meal/id --> specific meal by id',()=>{
+test('Fetch food',()=>{
+    
 
-    })
-    it('POST /order/add --> create order',()=>{
-
-    })
-    it('GET /order/get --> order array',()=>{
-
-    })
+    expect.assertions(0); //  
+    return app.viewMeal()
+    .then( data=>{
+            expect(data.id).toEqual(60)
+        }
+    )
+})
     it('GET /meal/id --> 404',()=>{
         return request(app)
         .get('/meals/999999').expect(404)
     })
-})
+
+
