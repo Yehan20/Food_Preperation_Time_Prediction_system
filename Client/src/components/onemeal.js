@@ -61,8 +61,21 @@ const SpecificMeal = () => {
         e.preventDefault();
         setLoading(!loading)
         setTimeout(() => {
-            Axios.post('/time', {
+            // flask api
+            // axios({
+            //     method: 'get',
+            //     url: `https://api.someurl.com/subject/v2/resource/somevalue`,
+            //     withCredentials: false,
+            //     params: {
+            //       access_token: SECRET_TOKEN,
+            //     },
+            //   });
 
+            Axios.post('https://foot-prep-time-service-yn.onrender.com/time', {
+                headers: {
+                    authorization: ' xxxxxxxxxx' ,
+                    'Content-Type': 'application/json'
+                 } ,
                 foodName,
                 foodAmt,
                 hrs,

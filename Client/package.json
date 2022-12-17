@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://127.0.0.1:5000",
+  "proxy": "https://foot-prep-time-service-yn.onrender.com",
   "eslintConfig": {
     "extends": "react-app"
   },
