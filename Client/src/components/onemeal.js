@@ -85,9 +85,9 @@ const SpecificMeal = () => {
 
             }).then((result) => {
                 setLoading(false)
-                console.log(result)
-                console.log(result.data)
-                if (result.statusText === "OK") {
+                // console.log(result)
+                // console.log(result.data)
+                if (result.statusText === "OK" || result.status===200) {
                     console.log("request send");
                     let newTime = timeConvert(result.data + day)
                     
