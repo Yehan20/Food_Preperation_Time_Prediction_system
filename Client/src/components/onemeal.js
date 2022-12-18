@@ -85,6 +85,7 @@ const SpecificMeal = () => {
 
             }).then((result) => {
                 setLoading(false)
+                console.log(result)
                 console.log(result.data)
                 if (result.statusText === "OK") {
                     console.log("request send");
