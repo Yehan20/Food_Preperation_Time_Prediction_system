@@ -18,7 +18,7 @@ const Login = () => {
         setuserName('')
         setPwd('')
     
-        Axios.post('http://localhost:3001/customer-login', {
+        Axios.post('https://foodlab-services.onrender.com/customer-login', {
             userName,
             pwd,
  

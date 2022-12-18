@@ -21,7 +21,7 @@ const SignUp = () => {
         setConfirm('')
         if (pwd === confirm) {
 
-            Axios.post('http://localhost:3001/customer-sign-in', {
+            Axios.post('https://foodlab-services.onrender.com/customer-sign-in', {
                 userName,
                 pwd,
 

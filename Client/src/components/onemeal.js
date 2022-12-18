@@ -57,7 +57,7 @@ const SpecificMeal = () => {
     }
 
     // Sending the data to the machne learning model in our flask serverr
-    const findTime = (e) => {
+    const  findTime = (e) => {
         e.preventDefault();
         setLoading(!loading)
         setTimeout(() => {

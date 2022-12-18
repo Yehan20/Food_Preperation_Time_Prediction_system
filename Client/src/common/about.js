@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useCustomFetch from '../custom-hooks/useCustomFetch';
 
 const About = () => {
-    const { meals, error } = useCustomFetch('http://localhost:3001/meals')
+    const { meals, error } = useCustomFetch('https://foodlab-services.onrender.com/meals')
     return (
         <>
             <div className="containfer-fluid section-2">
