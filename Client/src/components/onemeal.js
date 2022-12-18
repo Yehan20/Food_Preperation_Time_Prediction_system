@@ -72,10 +72,7 @@ const SpecificMeal = () => {
             //   });
 
             Axios.post('https://foot-prep-time-service-yn.onrender.com/time', {
-                headers: {
-                    authorization: ' xxxxxxxxxx' ,
-                    'Content-Type': 'application/json'
-                 } ,
+              
                 foodName,
                 foodAmt,
                 hrs,

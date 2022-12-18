@@ -1,11 +1,12 @@
 
 from flask import Flask,render_template,request
+from flask_cors import CORS
 import pickle
 import numpy as np
 import json
 
 app=Flask(__name__)
-
+CORS(app)
 def load_md():
     model=pickle.load(open('file2.pkl','rb')) 
     return model
