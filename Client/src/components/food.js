@@ -20,8 +20,8 @@ const Food = () => {
 
     const [mealList, setMealList] = useState([])
     const [isfilter, setIsFilter] = useState(false)
-    const [category, setCategory] = useState('')
-    const [activeItem, setActiveItem] = useState('all');
+    const [category, setCategory] = useState('main')
+    const [activeItem, setActiveItem] = useState('main');
 
           
     const filterItems = useCallback(() => {
@@ -31,7 +31,7 @@ const Food = () => {
         const newMeals = meals.filter((meal) => meal.category === category)
         setMealList(newMeals)
         setIsFilter(true)
-    },[category])
+    },[category,meals])
     
     
     useEffect(() => {
@@ -57,13 +57,10 @@ const Food = () => {
             <div className='container-fluid section-1'>
                 <div className="container mb-3">
                     <div className="d-flex flex-column flex-md-row  gap-2 justify-content-center">
-                        <button className={`btn btn-primary mx-3 ${!isfilter ? 'active' : ''}`} value='all' onClick={() => {
-                            setIsFilter(false)
-                            setActiveItem('')
-                        }}>All Items</button>
+
                         <button className={`btn btn-primary mx-3 ${activeItem === 'main' ? 'active' : ''}`} value='main' onClick={(e) => (setCategory(e.target.value))}>Main</button>
                         <button className={`btn btn-primary mx-3 ${activeItem === 'appetizer' ? 'active' : ''}`} value='appetizer' onClick={(e) => (setCategory(e.target.value))}>Appetizer</button>
-                        <button className={`btn btn-primary mx-3 ${activeItem === 'bites' ? 'active' : ''}`} value='bites' onClick={(e) => (setCategory(e.target.value))}>Bites</button>
+                        <button className={`btn btn-primary mx-3 ${activeItem === 'bites' ? 'active' : ''}`} value='bite' onClick={(e) => (setCategory(e.target.value))}>Bites</button>
                         <button className={`btn btn-primary mx-3 ${activeItem === 'dessert' ? 'active' : ''}`} value='dessert' onClick={(e) => (setCategory(e.target.value))}>Dessert</button>
                     </div>
                     <div className="meal-box">
