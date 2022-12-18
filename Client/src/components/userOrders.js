@@ -12,7 +12,7 @@ const UserOrders = () => {
     const [orders, setOrders] = useState([]);
 
     const getOrders = useCallback(() => {
-        Axios.get('http://localhost:3001/meals/orders/' + state.userName).then((result) => {
+        Axios.get('https://foodlab-services.onrender.com/meals/orders/' + state.userName).then((result) => {
             //   console.log(result)
             setOrders(result.data)
         }).catch((error) => {

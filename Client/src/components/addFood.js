@@ -36,7 +36,7 @@ const AddFood = () => {
         formData.append("veg", veg);
 
         try {
-            const res = await Axios.post('http://localhost:3001/meals/add',
+            const res = await Axios.post('https://foodlab-services.onrender.com/meals/add',
                 formData
             )
 

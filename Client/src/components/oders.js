@@ -12,7 +12,7 @@ const Orders = () => {
 
 
 
-        Axios.get('http://localhost:3001/orders/get-orders').then((result) => {
+        Axios.get('https://foodlab-services.onrender.com/orders/get-orders').then((result) => {
             setOrders(result.data)
 
         }).catch(err => console.log(err))
@@ -21,7 +21,7 @@ const Orders = () => {
     }
     const complete = (order) => {
         console.log(order);
-        Axios.put('http://localhost:3001/orders/complete-order', {
+        Axios.put('https://foodlab-services.onrender.com/orders/complete-order', {
             order
         }).then((result) => {
             if (result.statusText === 'OK') {

@@ -16,7 +16,7 @@ const Food = () => {
 
    
 
-    const { meals, error } = useCustomFetch('http://localhost:3001/meals')
+    const { meals, error } = useCustomFetch('https://foodlab-services.onrender.com/meals')
 
     const [mealList, setMealList] = useState([])
     const [isfilter, setIsFilter] = useState(false)

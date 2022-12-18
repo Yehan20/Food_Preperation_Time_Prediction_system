@@ -102,7 +102,7 @@ const SpecificMeal = () => {
 
    const [error,setError]=useState(false)
     const getMeal = useCallback(() => {
-        Axios.get('http://localhost:3001/meals/meal/' + state.id).then((result) => {
+        Axios.get('https://foodlab-services.onrender.com/meals/meal/' + state.id).then((result) => {
            if(result.data.length===0){
               setError(true)
               result=[]
@@ -117,7 +117,7 @@ const SpecificMeal = () => {
     },[state.id])
 
     const IncompleteOrders = () => {
-        Axios.get('http://localhost:3001/orders/get-incomplete-orders').then((result) => {
+        Axios.get('https://foodlab-services.onrender.com/orders/get-incomplete-orders').then((result) => {
 
             setincompleteOrds(result.data)
 
@@ -132,7 +132,7 @@ const SpecificMeal = () => {
 
 
     const makeOrder = () => {
-        Axios.post('http://localhost:3001/orders/add-order', {
+        Axios.post('https://foodlab-services.onrender.com/orders/add-order', {
             foodName,
             foodAmt,
             size,
