@@ -4,6 +4,7 @@ import useCustomFetch from '../custom-hooks/useCustomFetch';
 import UserNav from './userNav';
 import { useLocation} from 'react-router-dom';
 import { useCallback } from 'react';
+import Loader from '../common/loader';
 
 
 const Food = () => {
@@ -60,12 +61,16 @@ const Food = () => {
 
                         <button className={`btn btn-primary mx-3 ${activeItem === 'main' ? 'active' : ''}`} value='main' onClick={(e) => (setCategory(e.target.value))}>Main</button>
                         <button className={`btn btn-primary mx-3 ${activeItem === 'appetizer' ? 'active' : ''}`} value='appetizer' onClick={(e) => (setCategory(e.target.value))}>Appetizer</button>
-                        <button className={`btn btn-primary mx-3 ${activeItem === 'bites' ? 'active' : ''}`} value='bite' onClick={(e) => (setCategory(e.target.value))}>Bites</button>
+                        <button className={`btn btn-primary mx-3 ${activeItem === 'bite' ? 'active' : ''}`} value='bite' onClick={(e) => (setCategory(e.target.value))}>Bites</button>
                         <button className={`btn btn-primary mx-3 ${activeItem === 'dessert' ? 'active' : ''}`} value='dessert' onClick={(e) => (setCategory(e.target.value))}>Dessert</button>
                     </div>
                     <div className="meal-box">
 
-                        {error && <h2 className='text-primary'>Loading...</h2>}
+                        {error && <div>
+                            <Loader/>
+                              {/* <h2 className='text-primary'>Loading...</h2> */}
+                       
+                          </div>}
                         {!isfilter &&
                             meals.map((meal) => {
                                 return <Meal meal={meal} userName={userName} key={meal.id}/>

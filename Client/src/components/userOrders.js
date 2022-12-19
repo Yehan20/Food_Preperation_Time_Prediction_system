@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import Axios from "axios";
+import Loader from "../common/loader";
 
 
 
@@ -9,15 +10,20 @@ const UserOrders = () => {
     // const { userName } = useParams();
     const {state}=useLocation();
     const history = useHistory()
+    const [mainLoader,setmainLoading]=useState(true)
     const [orders, setOrders] = useState([]);
 
     const getOrders = useCallback(() => {
-        Axios.get('https://foodlab-services.onrender.com/meals/orders/' + state.userName).then((result) => {
-            //   console.log(result)
-            setOrders(result.data)
-        }).catch((error) => {
-            console.log(error)
-        })
+        setTimeout(()=>{
+            Axios.get('https://foodlab-services.onrender.com/meals/orders/' + state.userName).then((result) => {
+                //   console.log(result)
+                setOrders(result.data)
+                setmainLoading(false)
+            }).catch((error) => {
+                console.log(error)
+            })
+        },1000)
+
     },[state.userName])
 
 
@@ -27,7 +33,7 @@ const UserOrders = () => {
 
 
     const cancelOrder=(order_id)=>{
-        Axios.put('http://localhost:3001/orders/cancel-order',{
+        Axios.put('https://foodlab-services.onrender.com/orders/cancel-order',{
             order_id
         }).then((result)=>{
             if(result.statusText==='OK')
@@ -42,6 +48,12 @@ const UserOrders = () => {
         history.push('/viewFood', {
             state: state.userName
         })
+    }
+    
+    if(mainLoader){
+        return <div className="d-flex justify-content-center align-items-center">
+           <Loader/>
+        </div>
     }
     return (<>
         <div className="container-fluid section-3">

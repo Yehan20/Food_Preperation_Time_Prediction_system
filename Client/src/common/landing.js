@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import recording from '../assets/recording.gif'
 
 const NavBar = () => {
     return (
@@ -20,6 +21,16 @@ const NavBar = () => {
                 <img className="d-block w-100" src="../slider-img/slider-1.jpg"  alt='name'/>
     
               </div>
+
+              <div className="carousel-caption caption-move d-none d-md-flex align-items-center justify-content-around">
+                  <img src={recording} alt='Prepearing'  />
+                  <div></div>
+                  <a href='#get' className='btn btn-large mt-3 text-xl px-6 py-2 btn-dark text-white d-block'>
+                      Get Started
+                  </a>
+  
+                </div>
+
     
          
       

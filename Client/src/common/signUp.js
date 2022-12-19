@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import { useHistory } from "react-router-dom";
+import Loader from "./loader";
 
 
 
@@ -10,15 +11,14 @@ const SignUp = () => {
     const [confirm, setConfirm] = useState('');
     const [errMsg, seterrMsg] = useState('');
     const [sucess, setSucess] = useState(true);
+    const [loading, setLoading] = useState(false)
 
     const history = useHistory()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        setuserName('')
-        setPwd('')
-        setConfirm('')
+        setLoading(true)
+        seterrMsg('')
         if (pwd === confirm) {
 
             Axios.post('https://foodlab-services.onrender.com/customer-sign-in', {
@@ -29,6 +29,7 @@ const SignUp = () => {
                 console.log(result)
                 if (result.data.status) {
                     setSucess(true)
+                    setLoading(false)
                     console.log('login valide')
                     history.push({
                         pathname: '/login',
@@ -36,14 +37,25 @@ const SignUp = () => {
                     })
 
                 }
-                else{
+                else {
                     setSucess(false)
+                    setLoading(false)
+                    setuserName('')
+                    setPwd('')
+                    setConfirm('')
                 }
             }).catch(err => console.log(err))
 
         }
         else {
-            seterrMsg('passowrd not matching')
+            setuserName('')
+            setPwd('')
+            setConfirm('')
+            setTimeout(() => {
+                setLoading(false)
+                setSucess(true)
+                seterrMsg('passowrd not matching')
+            }, 2000)
         }
 
     }
@@ -73,8 +85,9 @@ const SignUp = () => {
                                     <input required type="password" className="form-control" id="exampleFormControlInput1" onChange={(e) => setConfirm(e.target.value)}
                                         value={confirm} />
                                 </div>
-                                <button className="btn btn-primary">Sign Up</button>
+                                {!loading && <button className="btn btn-primary">Sign Up</button>}
                                 <p className="text-center text-danger">{errMsg}</p>
+                                {loading && <Loader />}
                                 <div>
                                     {!sucess && <p className="text-center text-danger">User Name is Taken</p>}
                                 </div>
