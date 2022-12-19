@@ -40,7 +40,7 @@ const AddFood = () => {
                 formData
             )
 
-            if (res.statusText === "OK") {
+            if (res.statusText === "OK" || res.status===200) {
                 alert('inserted')
                 // history.push('/')
                 // document.querySelector('input').value = ''

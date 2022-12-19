@@ -1,8 +1,8 @@
 # Food Preperation Time and Ready Time Prediction System 
 
-# Food labs smart food ordering system , is an intelligent system that uses AI Technology to give you the time taken for a meal to prepeared and the time it will be avaiable, to an user before he can make an order, which helps him to get notified 
+## Food labs smart food ordering system , is an intelligent system that uses AI Technology to give you the time taken for a meal to prepeared and the time it will be avaiable, to an user before he can make an order, which helps him to get notified 
 
-# This is deployed in a Test envirnmoment the deployed envirnoment may not be suitable for Production
+## This is deployed in a Test envirnmoment the deployed envirnoment may not be suitable for Production
 
 
 Link to the application: https://food-labs-sos.netlify.app/
@@ -11,15 +11,16 @@ Link to the application: https://food-labs-sos.netlify.app/
 
 
 ## Deployment
-- Backend - Render
+- Node Backend - Render
+- Flask Backend - Render
 - Front End - Netlify
 
 ## Features
 
+- AI Prediction before ordering - Gives Preperation Time and Ready Time
 - CRUD functionalities
 - Private Routes User Authentication
 - Api calls 
-- AI Prediction before ordering
 - View food items as category
 - Appointments with today's date are highlighted
 
@@ -33,6 +34,7 @@ Link to the application: https://food-labs-sos.netlify.app/
 - MySQL
 - Python + Flask
 - Jupiter Note Book - Model Training
+- Bootstrap - CSS
 
 ## Lessons learned
 

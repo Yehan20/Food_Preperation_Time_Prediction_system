@@ -24,7 +24,7 @@ const Orders = () => {
         Axios.put('https://foodlab-services.onrender.com/orders/complete-order', {
             order
         }).then((result) => {
-            if (result.statusText === 'OK') {
+            if (result.statusText === 'OK' || result.status===200) {
                 getOrders();
             }
         })
