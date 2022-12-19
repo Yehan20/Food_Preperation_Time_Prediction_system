@@ -73,7 +73,7 @@ def predictTime():
   
       data=[food_id,newCategory,convertedSize,y["foodAmt"],y["nonVeg"],y["veg"],y["incompleteOrdrs"],cnvrtdExp,y["hrs"]]
       num= np.array([data])
-      #   print(num.astype(np.float))
+      print(num.astype(np.float))
       time=model.predict(num.astype(np.float)) # make the prediction
       return str(time[0]);
  

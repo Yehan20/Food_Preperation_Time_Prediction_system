@@ -4,6 +4,12 @@
 
 # This is deployed in a Test envirnmoment the deployed envirnoment may not be suitable for Production
 
+
+Link to the application: https://food-labs-sos.netlify.app/
+
+![](Client/public/slider-img/demo.gif)
+
+
 ## Deployment
 - Backend - Render
 - Front End - Netlify
@@ -31,10 +37,14 @@
 ## Lessons learned
 
 - How to use Axios to communicate with Servers
+- How comunicate between React and Flask server
 - Create Private routes
-- How to implement MVC Architecture in Backend
+- How to implement MVC Architecture in Node Server
 - How to Use Custom Hooks
 - How to Connect mysql db into Express
 - How to deploy express webservices into Render and flask server
 - How to create test DB and connect into express
+
+
+
 

@@ -36,7 +36,7 @@ const UserOrders = () => {
         Axios.put('https://foodlab-services.onrender.com/orders/cancel-order',{
             order_id
         }).then((result)=>{
-            if(result.statusText==='OK')
+            if(result.statusText==='OK' || result.status===200)
             getOrders()
         }).catch(error=>console.log(error))
     }
