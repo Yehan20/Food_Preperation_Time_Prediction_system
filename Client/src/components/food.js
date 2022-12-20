@@ -64,6 +64,7 @@ const Food = () => {
                         <button className={`btn btn-primary mx-3 ${activeItem === 'bite' ? 'active' : ''}`} value='bite' onClick={(e) => (setCategory(e.target.value))}>Bites</button>
                         <button className={`btn btn-primary mx-3 ${activeItem === 'dessert' ? 'active' : ''}`} value='dessert' onClick={(e) => (setCategory(e.target.value))}>Dessert</button>
                     </div>
+                    <h3 className='my-3 text-center'>Choose the Meal</h3>
                     <div className="meal-box">
 
                         {error && <div>

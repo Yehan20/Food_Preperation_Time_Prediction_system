@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import recording from '../assets/recording.gif'
 
 const NavBar = () => {
+
     return (
       <>
-      <div className='bg-dark header-nav d-flex justify-content-center align-items-center p-4'>
+      <div className='bg-dark header-nav d-flex justify-content-center align-items-center p-4' >
         <Link to="/">
             <img src="slider-img/logo.jpg" className='img-fluid mini-logo' alt="Logo"/>
         </Link>

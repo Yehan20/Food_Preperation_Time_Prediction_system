@@ -1,5 +1,5 @@
 import Axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import useCustomFetch from '../custom-hooks/useCustomFetch';
 import Loader from "./loader";
@@ -12,6 +12,14 @@ const About = () => {
     const [adminLogin,setDisplayAdmin]=useState(false)
     const [userName,setuserName]=useState()
     // demo login code
+
+    const scrollRef= useRef();
+    useEffect(()=>{
+
+        scrollRef.current.focus()
+        scrollRef.current.scrollIntoView();
+        // scrollRef.current.scrollIntoView({block: "end"});
+    })
     const demoLogin = (e) => {
         e.preventDefault();
         const userName = 'test';
@@ -46,9 +54,10 @@ const About = () => {
         <>
             <div className="containfer-fluid section-2">
                 <h3 className="text-center">Welcome to Our Shop</h3>
-                <div className="d-flex justify-content-center">
-                    <Link className='btn btn-primary' title="Click to Login" to='/login'>Login</Link>
-                    <Link className='btn btn-primary mx-4' id='get' onClick={demoLogin} title="Check features" to='/viewFood'>Demo</Link>
+                <div className="d-flex justify-content-center" >
+                   <Link className='btn btn-primary '  ref={scrollRef} onClick={demoLogin} title="Check features" to='/viewFood'>Demo Run</Link>
+                    <Link className='btn btn-primary mx-4' title="Click to Login" to='/login'>Login</Link>
+                
                     <Link className='btn btn-primary' title="Click to Sign UP" to='/sign-up'>Sign Up</Link>
                 </div>
                 <h3 className="text-center  mt-4">Admin Login</h3>
@@ -106,9 +115,9 @@ const About = () => {
                                 Now No need to ask when will the meals will be ready. You can get all the information before you make an order.
                             </p>
                             <p className="my-3">
-                                Our Smart System uses machine learning technology to to give you the accraest time your order will be ready for you to collect
+                                Our Smart System uses machine learning technology to to give you the accuratest time your order will be ready for you to collect
                                 before even you can place the order. so you can easily make a decision based on your time. you can choose from which cheif you want to make your order
-                                also you can view the results for different times of the day without waiting for that time XDDD
+                                also you can view the results for different times of the day without waiting for that time XDDD.
                             </p>
                             <p>
                                 With data from your side and the current status of the resturant are taken as factors that our trained model uses to

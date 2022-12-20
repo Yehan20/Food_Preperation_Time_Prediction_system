@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 
 const Meal = ({ meal,userName }) => {
 
-    const { name, category, src, description, price, id } = meal
+    const { name, category, src, price, id } = meal
     const history=useHistory()
     const goDetails = (e) => {
         e.preventDefault();
@@ -19,7 +19,6 @@ const Meal = ({ meal,userName }) => {
             <h3>{name}</h3>
             <img src={src} alt={name} className="img-fluid" />
             <h4>{category}</h4>
-            <p>{description}</p>
             <p>RS:{price}</p>
         </Link>
     </div>
