@@ -26,7 +26,7 @@ const FoodList = () => {
                             <h3>{name}</h3>
                             <img src={src} alt={name} className="img-fluid" />
                             <h4>{category}</h4>
-                            <p>{description}</p>
+                            {/* <p>{description}</p> */}
                             <p>RS:{price}</p>
 
                         </div>

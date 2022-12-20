@@ -48,7 +48,7 @@ const About = () => {
                 <h3 className="text-center">Welcome to Our Shop</h3>
                 <div className="d-flex justify-content-center">
                     <Link className='btn btn-primary' title="Click to Login" to='/login'>Login</Link>
-                    <Link className='btn btn-primary mx-4' id='get' onClick={demoLogin} title="Check features" to='/viewFood'>Demo Run</Link>
+                    <Link className='btn btn-primary mx-4' id='get' onClick={demoLogin} title="Check features" to='/viewFood'>Demo</Link>
                     <Link className='btn btn-primary' title="Click to Sign UP" to='/sign-up'>Sign Up</Link>
                 </div>
                 <h3 className="text-center  mt-4">Admin Login</h3>
