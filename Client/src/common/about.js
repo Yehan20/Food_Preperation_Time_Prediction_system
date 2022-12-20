@@ -19,7 +19,7 @@ const About = () => {
         scrollRef.current.focus()
         scrollRef.current.scrollIntoView();
         // scrollRef.current.scrollIntoView({block: "end"});
-    })
+    },[])
     const demoLogin = (e) => {
         e.preventDefault();
         const userName = 'test';
@@ -67,7 +67,7 @@ const About = () => {
                 </div>
                 { adminLogin && <div className="admin login mx-auto mt-3" style={{maxWidth:'300px'}} >
                         <div className="mb-3 w-100 d-flex ">
-                            <input required type="password" className="form-control" placeholder="Enter code" id="exampleFormControlInput1" value={userName} onChange={(e) => setuserName(e.target.value)}/>
+                            <input required type="password" className="form-control" placeholder="Enter code" id="exampleFormControlInput1"  onChange={(e) => setuserName(e.target.value)}/>
                             <button className="btn btn-danger" onClick={handleLogin} >Login</button> 
                         </div>
                     </div> }
