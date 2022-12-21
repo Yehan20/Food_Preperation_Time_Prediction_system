@@ -92,7 +92,7 @@ const SpecificMeal = () => {
 
                 }
             }).catch((error) => console.log(error))
-        }, 1500)
+        }, 100)
 
     }
 
@@ -125,7 +125,7 @@ const SpecificMeal = () => {
         IncompleteOrders()
         setTimeout(()=>{
             setmainLoading(false)
-        },2000)
+        },1000)
 
     }, [getMeal])
 
@@ -258,7 +258,7 @@ const SpecificMeal = () => {
 
                                 </div>
 
-                                {!canOrder && <p className="text-danger text-center mt-3">Please Find the Ready time to Make order</p>}
+                                {!canOrder && <p className="text-success text-center mt-3">Please Find the Ready time to Make order</p>}
 
                             </div>
                             {loading && <div className="d-flex flex-column align-items-center justify-content-start">

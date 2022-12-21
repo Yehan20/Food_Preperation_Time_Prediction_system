@@ -7,7 +7,7 @@ const useCustomFetch = (url) => {
     const [meals, setMeals] = useState([])
     const [error,setError]=useState(true)
     useEffect(() => {
-       setTimeout(()=>{
+   
             Axios.get(url).then((result) => {
 
                 setMeals(result.data)
@@ -17,7 +17,7 @@ const useCustomFetch = (url) => {
                 console.log(err)
 
             })
-       },1000)
+      
        return ()=> {
 
     
