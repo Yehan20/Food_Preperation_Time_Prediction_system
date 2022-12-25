@@ -63,8 +63,7 @@ const SpecificMeal = () => {
         e.preventDefault();
         setLoading(!loading)
         setOrdered(false)
-        setTimeout(() => {
-
+         console.log('req send')
             Axios.post('https://foot-prep-time-service-yn.onrender.com/time', {
 
                 foodName,
@@ -82,7 +81,7 @@ const SpecificMeal = () => {
                 // console.log(result)
                 // console.log(result.data)
                 if (result.statusText === "OK" || result.status === 200) {
-                    console.log("request send");
+                    console.log("respone got");
                     let newTime = timeConvert(result.data + day)
 
                     setData(newTime);
@@ -92,7 +91,7 @@ const SpecificMeal = () => {
 
                 }
             }).catch((error) => console.log(error))
-        }, 100)
+     
 
     }
 

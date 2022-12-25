@@ -6,7 +6,7 @@ import numpy as np
 import json
 
 app=Flask(__name__)
-CORS(app, send_wildcard=True)
+CORS(app, threaded=True)
 def load_md():
     model=pickle.load(open('file2.pkl','rb')) 
     return model
