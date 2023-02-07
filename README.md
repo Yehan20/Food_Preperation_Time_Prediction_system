@@ -1,14 +1,9 @@
-# Food Preperation Time and Ready Time Prediction System 
+# Food Preperation Time Prediction System
 
-Food ordering system that will use machine learning to predict the time taken for a meal to be ready, 
-users can order different food items.
-
-## This is deployed in a Test envirnmoment the deployed envirnoment may not be suitable for Production
+Food ordering system that will  predict the time taken for a meal to be ready, 
+users can order different food items. and view food items
 
 Link to the application: https://food-labs-sos.netlify.app/
-
-
-
 
 ## Deployment
 - Node Backend - Render
@@ -17,7 +12,7 @@ Link to the application: https://food-labs-sos.netlify.app/
 
 ## Features
 
-- AI Prediction before ordering - Gives Preperation Time and Ready Time
+- Gives time food will be ready
 - CRUD functionalities
 - Private Routes User Authentication
 - Api calls 
