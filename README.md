@@ -1,13 +1,13 @@
 # Food Preperation Time and Ready Time Prediction System 
 
-## Food labs smart food ordering system , is an intelligent system that uses AI Technology to give you the time taken for a meal to be prepeared and the time it will be avaiable, to an user before he can make an order, which helps him to get notified .
+Food ordering system that will use machine learning to predict the time taken for a meal to be ready, 
+users can order different food items.
 
 ## This is deployed in a Test envirnmoment the deployed envirnoment may not be suitable for Production
 
-
 Link to the application: https://food-labs-sos.netlify.app/
 
-![](Client/public/slider-img/demo.gif)
+
 
 
 ## Deployment
