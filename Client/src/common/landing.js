@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import recording from '../assets/recording.gif'
+
 
 const NavBar = () => {
 
@@ -13,7 +13,7 @@ const NavBar = () => {
         <p className='my-0 mx-3 text-center text-white'>Food Labs Smart Food Ordering System</p>
       </div>
    
-            <div id="slider" className="carousel slide" data-ride="carousel">
+            {/* <div id="slider" className="carousel slide" data-ride="carousel">
 
       
             <div className="carousel-inner">
@@ -28,7 +28,7 @@ const NavBar = () => {
 
                 </div>      
             </div>
-          </div>
+          </div> */}
         </>
     );
 }

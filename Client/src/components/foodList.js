@@ -20,7 +20,7 @@ const FoodList = () => {
                 {  
                 !error &&
                     meals.map((meal) => {
-                        const { name, category, src, description, price, id } = meal
+                        const { name, category, src, price, id } = meal
                         return <div className='card w-100' key={id}>
 
                             <h3>{name}</h3>
